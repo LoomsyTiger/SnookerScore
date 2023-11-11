@@ -20,12 +20,12 @@ public class SnookerScoreTracker {
                 break;
             }
 
-            System.out.println("Enter points scored: ");
-            int points = scanner.nextInt();
-            scanner.nextLine(); // Consume the newline character
+            System.out.println("Enter ball potted: ");
+            String ballPotted = scanner.nextLine();
 
-            snookerGame.recordShot(playerName, points);
+            snookerGame.recordShot(playerName, ballPotted);
             snookerGame.displayScores();
+            snookerGame.displayRemainingScore();
         }
 
         scanner.close();
