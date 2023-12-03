@@ -43,4 +43,22 @@ public class SnookerGame {
                 }
             }
         }
+    public void keepScore() {
+        Scanner scanner = new Scanner(System.in);
+        int totalBallsPotted = 0;
+
+        while (pointsRemaining > 0) {
+            System.out.println("Enter ball for player " + breakingPlayer);
+            String pottedBall = scanner.nextLine();
+
+            int ballScore = ballValues.get(pottedBall);
+            System.out.println("Scored "+ballScore+"points");
+            totalBallsPotted = totalBallsPotted + 1;
+            player1score = player1score + ballScore;
+            pointsRemaining = pointsRemaining - ballScore;
+
+            System.out.println("Player "+breakingPlayer+" has "+player1score+" points. "+pointsRemaining+" points remaining.");
+        }
+    }
+
     }

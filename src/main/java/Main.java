@@ -18,5 +18,6 @@ public class Main {
         System.out.println(players.getPlayerNames());
 
         snookerGame.startGame();
+        snookerGame.keepScore();
     }
 }
